@@ -3,7 +3,12 @@ import random
 
 
 def congratulate_user():
-    print(f"Congratulations, you won! your words: {guesses}")
+
+
+    print("=============================")
+    print("= Congratulations! You won! =")
+    print("=============================")
+
 
 
 def is_game_over():
