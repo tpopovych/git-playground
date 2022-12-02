@@ -35,6 +35,7 @@ guesses = []
 WORDS_TO_WIN = 5
 ERRORS_TO_LOSE = 3
 
+
 words = words_fetcher.fetch_words(min_letters=9, max_letters=9)
 full_list = words_fetcher.fetch_words(min_letters=3, max_letters=9)
 word = words[random.randrange(0, len(words))]
@@ -59,3 +60,5 @@ while not is_game_over():
     else:
         errors += 1
         print(f"Oops :( No such word, you have {ERRORS_TO_LOSE - errors} lives more")
+        if (ERRORS_TO_LOSE - errors) == 0:
+            print("You lose")
